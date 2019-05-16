@@ -28,6 +28,20 @@ class System:
             mass += body.mass
         return mass
 
+        # def add(self, new_body):
+        # if len(self.bodies) == 0:
+        #     self.bodies.append(new_body)
+        #     System.all_bodies.append(new_body)
+        # else:
+        #     for body in self.bodies:
+        #         if body.name == new_body.name:
+        #             print('this body is already in list')
+                            
+        #         else: 
+        #             self.bodies.append(new_body)
+        #             System.all_bodies.append(new_body)
+        #             break
+
       
 
 class Body:
@@ -81,6 +95,7 @@ solar.add(planet)
 print(solar.total_mass())
 
 sun = Star('Sun', 1.989, 'G' )
+sun1 = Star('Sun1', 1.989, 'G' )
 print(sun)
 earth = Planet('Earth', 8484, 10, 2001)
 jupiter = Planet('Jupiter', 9999, 11, 2004)
@@ -89,6 +104,7 @@ print(moon)
 solar.add(moon)
 solar.add(earth)
 solar.add(jupiter)
+solar.add(sun)
 solar.add(sun)
 print(solar.total_mass())
 print(solar.bodies)
