@@ -53,11 +53,11 @@ class Body:
         return self.name
 
     @classmethod
-    def all(cls, bodies, class2):
+    def all(cls, bodies):
         bodies_list = []
         for body in bodies:
             # print('---',type(body))
-            if isinstance(body,class2):
+            if isinstance(body,cls):
                 bodies_list.append(body)
         return bodies_list
 
