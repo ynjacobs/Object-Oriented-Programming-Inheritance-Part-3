@@ -14,10 +14,18 @@ class System:
 
         
 
-    def add(self, new_body):
+    # def add(self, new_body):
         
-        if new_body in self.bodies:
-                print('this body is already in list')
+    #     if new_body in self.bodies:
+    #             print('this body is already in list')
+    #     else:
+    #          self.bodies.append(new_body)
+    #          System.all_bodies.append(new_body)
+
+
+    def add(self, new_body):
+        if new_body.name in [body.name for body in self.bodies]:
+            print('this body is already in list')
         else:
              self.bodies.append(new_body)
              System.all_bodies.append(new_body)
