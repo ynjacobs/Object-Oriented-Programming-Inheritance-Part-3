@@ -53,9 +53,9 @@ class Body:
         return self.name
 
     @classmethod
-    def all(cls, bodies):
+    def all(cls, system):
         bodies_list = []
-        for body in bodies:
+        for body in system.bodies:
             # print('---',type(body))
             if isinstance(body,cls):
                 bodies_list.append(body)
@@ -113,7 +113,7 @@ print(alpha.bodies)
 print(System.all_bodies)
 print(System.total_galactic_mass())
 
-print(Body.all(solar.bodies, Planet))
+print(Planet.all(solar))
 
 
-print(Body.all(['h','y',10],str))
+# print(Body.all(['h','y',10],str))
